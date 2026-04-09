@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Софья Поленова — Онлайн фитнес-тренер</title>
+<meta name="description" content="Онлайн фитнес-тренер Софья Поленова. Убираю боли в спине, хроническую усталость и лишний вес. Тренировки + питание + врач в команде. Результат за 3 месяца.">
+<meta property="og:title" content="Софья Поленова — онлайн фитнес-тренер с врачом в команде">
+<meta property="og:description" content="Персональная программа: тренировки, питание, восстановление и работа по анализам. За 3 месяца — результат который останется.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sage: #7B8F6B; --sage-light: #e8ede4; --sage-dark: #5a6b4d;
+    --cream: #FAFAF7; --warm-white: #F5F4F0; --green-bg: #e8f0e6;
+    --charcoal: #1A1A1A; --dark-gray: #2D2D2D; --mid-gray: #666; --light-gray: #999;
+    --coral: #E07856; --coral-dark: #c9603d;
+    /* УЛУЧШЕННАЯ КОНТРАСТНОСТЬ */
+    --text-on-green: #2D2D2D; /* Темнее для читаемости на зелёном */
+    --subtitle-on-green: #4a4a4a; /* Темнее для подзаголовков */
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', -apple-system, sans-serif; color: var(--charcoal); background: var(--cream); -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+
+  /* NAV */
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 60px; background: var(--cream); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(0,0,0,0.04); }
+  .logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.5px; color: var(--charcoal); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; text-decoration: none; color: var(--mid-gray); letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.3s; }
+  .nav-links a:hover { color: var(--charcoal); }
+  .nav .cta-btn { font-family: 'Space Grotesk', sans-serif; background: var(--coral); color: white; border: none; padding: 12px 28px; border-radius: 100px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(224,120,86,0.2); }
+  .nav .cta-btn:hover { background: var(--coral-dark); box-shadow: 0 6px 20px rgba(224,120,86,0.3); transform: translateY(-1px); }
+
+  /* Mobile menu */
+  .mobile-menu-btn { display: none; background: none; border: none; font-size: 28px; cursor: pointer; color: var(--charcoal); }
+
+  /* HERO */
+  .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; min-height: 560px; padding: 60px 60px 80px; }
+  .hero-tag { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; color: var(--sage); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+  .hero-tag::before { content: ''; width: 24px; height: 2px; background: var(--sage); }
+  .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: 56px; font-weight: 700; line-height: 1.05; letter-spacing: -2px; margin-bottom: 24px; min-height: 120px; color: var(--charcoal); }
+  .hero h1 .static { color: var(--charcoal); }
+  .hero h1 .typed-text { color: var(--sage); }
+  .hero h1 .cursor { display: inline-block; width: 3px; background: var(--sage); margin-left: 4px; animation: blink 0.7s infinite; }
+  @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  .hero-desc { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.7; color: var(--mid-gray); font-weight: 300; margin-bottom: 36px; max-width: 460px; }
+  .hero-btn { font-family: 'Space Grotesk', sans-serif; background: var(--coral); color: white; border: none; padding: 16px 36px; border-radius: 100px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 8px 20px rgba(224,120,86,0.25); }
+  .hero-btn:hover { background: var(--coral-dark); box-shadow: 0 12px 28px rgba(224,120,86,0.35); transform: translateY(-2px); }
+  .hero-btns { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+  .hero-btn-secondary { font-family: 'Space Grotesk', sans-serif; background: transparent; color: var(--charcoal); border: 2px solid var(--sage); padding: 14px 28px; border-radius: 100px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; white-space: nowrap; }
+  .hero-btn-secondary:hover { background: var(--sage-light); transform: translateY(-2px); }
+  .hero-sub-caption { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--mid-gray); margin-top: 12px; font-weight: 400; }
+  .stats { display: flex; gap: 40px; margin-top: 48px; flex-wrap: wrap; }
+  .stat-number { font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700; color: var(--sage); letter-spacing: -1px; }
+  .stat-label { font-family: 'Inter', sans-serif; font-size: 12px; color: var(--light-gray); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+  .hero-image { border-radius: 24px; height: 520px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; background: #1a1a1a; }
+  .hero-image video { width: 100%; height: 100%; object-fit: cover; border-radius: 24px; display: block; }
+  @media (min-width: 969px) {
+    .hero-image { max-width: 320px; margin-left: auto; }
+    .hero-image video { object-position: center top; }
+  }
+
+  /* SECTION */
+  section { padding: 80px 60px; }
+  .section-tag { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; color: var(--sage); text-align: center; margin-bottom: 12px; }
+  section h2 { font-family: 'Space Grotesk', sans-serif; font-size: 42px; font-weight: 700; letter-spacing: -1.5px; text-align: center; margin-bottom: 12px; color: var(--charcoal); }
+  .section-sub { text-align: center; font-family: 'Inter', sans-serif; color: var(--mid-gray); font-size: 16px; font-weight: 400; margin-bottom: 56px; max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+
+  /* УЛУЧШЕННАЯ КОНТРАСТНОСТЬ ДЛЯ ЗЕЛЁНОГО ФОНА */
+  .bg-green .section-tag { color: var(--sage-dark); font-weight: 600; }
+  .bg-green h2 { color: var(--charcoal); }
+  .bg-green .section-sub { color: var(--subtitle-on-green); font-weight: 500; }
+
+  /* CARDS */
+  .cards-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1040px; margin: 0 auto; }
+  .card { background: white; border-radius: 20px; padding: 36px 28px; text-align: center; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.04); }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.06); background: var(--sage-light); }
+  .card:hover h3, .card:hover p { color: var(--charcoal); transition: color 0.3s ease; }
+  .card-icon { width: 56px; height: 56px; background: var(--sage-light); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; transition: all 0.3s; }
+  .card:hover .card-icon { background: var(--sage); }
+  .card-icon svg { width: 28px; height: 28px; stroke: var(--sage-dark); transition: all 0.3s; }
+  .card:hover .card-icon svg { stroke: white; }
+  .card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--charcoal); }
+  .card p { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.65; color: var(--mid-gray); font-weight: 400; }
+
+  /* SERVICES */
+  .cards-6 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1040px; margin: 0 auto; }
+  .card-sm { background: white; border-radius: 16px; padding: 28px 24px; display: flex; align-items: flex-start; gap: 16px; border: 1px solid rgba(0,0,0,0.04); transition: all 0.3s ease; }
+  .card-sm:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.05); background: var(--sage-light); }
+  .card-sm:hover h3, .card-sm:hover p { color: var(--charcoal); transition: color 0.3s ease; }
+  .card-sm-icon { width: 44px; height: 44px; min-width: 44px; background: var(--sage-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+  .card-sm:hover .card-sm-icon { background: var(--sage); }
+  .card-sm-icon svg { width: 22px; height: 22px; stroke: var(--sage-dark); transition: all 0.3s; }
+  .card-sm:hover .card-sm-icon svg { stroke: white; }
+  .card-sm h3 { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: -0.2px; margin-bottom: 6px; color: var(--charcoal); }
+  .card-sm p { font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.55; color: var(--mid-gray); font-weight: 400; }
+
+  /* STEPS with GREEN HOVER */
+  .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1040px; margin: 0 auto; }
+  .step { text-align: center; padding: 24px 20px; background: white; border-radius: 16px; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.04); }
+  .step:hover { background: var(--sage-light); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(123,143,107,0.15); }
+  .step:hover h3, .step:hover p { color: var(--charcoal); transition: color 0.3s ease; }
+  .step-num { width: 48px; height: 48px; background: var(--sage); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; margin: 0 auto 16px; }
+  .step h3 { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.2px; color: var(--charcoal); }
+  .step p { font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.6; color: var(--mid-gray); font-weight: 400; }
+  .steps-extras { max-width: 1040px; margin: 40px auto 0; display: grid; grid-template-columns: 1fr; gap: 20px; }
+  .steps-extra-card { background: white; border-radius: 16px; padding: 24px 28px; display: flex; align-items: flex-start; gap: 16px; border: 1px solid rgba(0,0,0,0.04); }
+  .steps-extra-card .icon { width: 48px; height: 48px; min-width: 48px; background: var(--sage); color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+  .steps-extra-card h4 { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; margin-bottom: 6px; color: var(--charcoal); }
+  .steps-extra-card p { font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.55; color: var(--mid-gray); font-weight: 400; }
+
+  /* FEEDBACK */
+  .feedback-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; max-width: 1040px; margin: 0 auto; align-items: start; }
+  .feedback-text h3 { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: -1px; margin-bottom: 20px; line-height: 1.2; color: var(--charcoal); }
+  .feedback-text h3 span { color: var(--sage); }
+  .feedback-text p { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7; color: var(--mid-gray); font-weight: 400; margin-bottom: 16px; }
+  .feedback-features { list-style: none; margin-top: 20px; }
+  .feedback-features li { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.6; color: var(--text-on-green); font-weight: 500; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; align-items: flex-start; gap: 12px; }
+  .feedback-features li .check { width: 24px; height: 24px; min-width: 24px; background: var(--sage-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--sage); font-size: 14px; font-weight: 700; margin-top: 2px; }
+  .screenshot-placeholder { background: var(--warm-white); border: 2px dashed rgba(0,0,0,0.1); border-radius: 20px; height: 420px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+  .screenshot-placeholder .ph-icon { width: 64px; height: 64px; background: var(--sage-light); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; }
+  .screenshot-placeholder p { font-family: 'Inter', sans-serif; font-size: 14px; color: var(--mid-gray); font-weight: 400; }
+
+  /* CASES */
+  .cases-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 1040px; margin: 0 auto; }
+  .case-card { background: white; border-radius: 20px; overflow: hidden; border: 1px solid rgba(0,0,0,0.04); transition: all 0.3s; }
+  .case-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.06); }
+  .case-photo { height: 240px; display: flex; align-items: center; justify-content: center; font-family: 'Inter', sans-serif; font-size: 14px; color: var(--mid-gray); }
+  .case-photo.elena { background: linear-gradient(135deg, #f5e6d0 0%, #e8d5c0 100%); }
+  .case-photo.blogger { background: linear-gradient(135deg, #d0e0d5 0%, #c0d4c8 100%); }
+  .case-body { padding: 28px; }
+  .case-body h3 { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 4px; color: var(--charcoal); }
+  .case-body .case-meta { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--sage); font-weight: 500; margin-bottom: 14px; }
+  .case-body p { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.65; color: var(--mid-gray); font-weight: 400; margin-bottom: 16px; }
+  .case-pain-result { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+  .case-pain, .case-result { flex: 1; padding: 16px; border-radius: 12px; }
+  .case-pain { background: rgba(224,120,86,0.08); }
+  .case-result { background: rgba(123,143,107,0.08); }
+  .case-pain h4, .case-result h4 { font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .case-pain h4 { color: var(--coral); }
+  .case-result h4 { color: var(--sage); }
+  .case-pain ul, .case-result ul { list-style: none; margin: 0; padding: 0; }
+  .case-pain li, .case-result li { font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.5; color: var(--charcoal); margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px; }
+  .case-pain li::before { content: '•'; color: var(--coral); font-weight: 700; }
+  .case-result li::before { content: '✓'; color: var(--sage); font-weight: 700; }
+  .case-arrow { display: flex; align-items: center; justify-content: center; min-width: 32px; }
+  .case-arrow svg { width: 32px; height: 32px; stroke: var(--sage); }
+  @media (max-width: 768px) {
+    .case-pain-result { flex-direction: column; gap: 12px; }
+    .case-arrow { transform: rotate(90deg); }
+  }
+  .case-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .case-tag { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; padding: 5px 12px; border-radius: 100px; background: var(--sage-light); color: var(--sage-dark); letter-spacing: 0.2px; }
+
+  /* TRAINING CAROUSEL */
+  .training-carousel-wrap { position: relative; max-width: 420px; margin: 0 auto; }
+  .training-carousel-inner { position: relative; border-radius: 24px; overflow: hidden; background: #1a1a1a; height: 640px; }
+  .training-slide { display: none; }
+  .training-slide.active { display: block; width: 100%; height: 100%; }
+  .training-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  @media (max-width: 968px) { .training-carousel-inner { height: 480px; } }
+  .training-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 100%; display: flex; justify-content: space-between; padding: 0 16px; z-index: 2; pointer-events: none; }
+  .training-nav .carousel-btn { pointer-events: all; }
+  .training-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
+  .training-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(0,0,0,0.15); cursor: pointer; transition: all 0.3s; }
+  .training-dot.active { background: var(--sage); width: 28px; border-radius: 5px; }
+  @media (min-width: 969px) { .training-carousel-wrap { max-width: 360px; } }
+
+  /* TEAM with CAROUSEL */
+  .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; max-width: 1040px; margin: 0 auto; align-items: center; }
+  .team-carousel { position: relative; border-radius: 20px; height: 480px; overflow: hidden; }
+  .carousel-container { position: relative; width: 100%; height: 100%; }
+  .carousel-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.5s ease-in-out; background: linear-gradient(135deg, #e0e8e2 0%, #d0dcd4 100%); display: flex; align-items: center; justify-content: center; font-family: 'Inter', sans-serif; font-size: 14px; color: var(--mid-gray); }
+  .carousel-slide.active { opacity: 1; z-index: 1; }
+  .carousel-dots { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 2; }
+  .carousel-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s; }
+  .carousel-dot.active { background: white; width: 28px; border-radius: 5px; }
+  .carousel-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 100%; display: flex; justify-content: space-between; padding: 0 20px; z-index: 2; }
+  .carousel-btn { background: rgba(255,255,255,0.9); border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 18px; transition: all 0.3s; color: var(--charcoal); }
+  .carousel-btn:hover { background: white; transform: scale(1.1); }
+  .team-text h3 { font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 700; letter-spacing: -0.8px; margin-bottom: 8px; line-height: 1.2; color: var(--charcoal); }
+  .team-text .team-role { font-family: 'Inter', sans-serif; font-size: 14px; color: var(--sage); font-weight: 500; margin-bottom: 16px; }
+  .team-text p { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7; color: var(--mid-gray); font-weight: 400; margin-bottom: 12px; }
+  .team-creds { list-style: none; margin-top: 16px; }
+  .team-creds li { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-on-green); font-weight: 500; padding: 6px 0; display: flex; align-items: flex-start; gap: 10px; }
+  .team-creds li .tc-dot { width: 6px; height: 6px; min-width: 6px; background: var(--sage); border-radius: 50%; margin-top: 6px; }
+
+  /* BLOGGER CASE */
+  .blogger-case .section-tag { color: #b5c4a8; }
+  .blogger-case h2 { color: white; }
+  .blogger-case .section-sub { color: rgba(255,255,255,0.7); font-weight: 400; }
+  .blogger-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1040px; margin: 0 auto; align-items: center; }
+  .blogger-image { background: rgba(255,255,255,0.08); border-radius: 20px; height: 400px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.1); }
+  .blogger-image::after { content: 'Фото блогера'; background: rgba(255,255,255,0.1); padding: 12px 24px; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 14px; color: rgba(255,255,255,0.4); }
+  .blogger-text .blogger-quote { font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 700; letter-spacing: -0.5px; line-height: 1.25; margin-bottom: 20px; color: white; }
+  .blogger-text .blogger-quote span { color: var(--sage); }
+  .blogger-text p { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.7); font-weight: 400; margin-bottom: 12px; }
+  .blogger-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+  .blogger-tag { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; padding: 8px 16px; border-radius: 100px; background: rgba(123,143,107,0.2); color: #b5c4a8; }
+
+  /* FAQ */
+  .faq-list { max-width: 720px; margin: 0 auto; }
+  .faq-item { background: white; border-radius: 16px; margin-bottom: 12px; border: 1px solid rgba(0,0,0,0.04); overflow: hidden; transition: all 0.3s ease; }
+  .faq-item:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+  .faq-question { padding: 24px 28px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: -0.2px; transition: all 0.3s ease; color: var(--charcoal); }
+  .faq-question:hover { background: var(--sage-light); color: var(--charcoal); }
+  .faq-question .arrow { font-size: 20px; color: var(--sage); transition: transform 0.3s; font-weight: 400; min-width: 24px; }
+  .faq-answer { padding: 0 28px 24px; font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.7; color: var(--mid-gray); font-weight: 400; display: none; }
+  .faq-item.open .faq-answer { display: block; }
+  .faq-item.open .arrow { transform: rotate(180deg); }
+
+  /* PRICING */
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1040px; margin: 0 auto; }
+  .price-card { background: white; border-radius: 20px; padding: 40px 32px; border: 1px solid rgba(0,0,0,0.04); position: relative; transition: all 0.3s ease; }
+  .price-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.06); }
+  .price-card.featured { border: 2px solid var(--sage); box-shadow: 0 8px 32px rgba(123,143,107,0.15); }
+  .price-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--sage); color: white; font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 600; padding: 6px 16px; border-radius: 100px; }
+  .price-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 4px; text-align: center; color: var(--charcoal); }
+  .price-card .price-subtitle { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--sage); font-weight: 500; text-align: center; margin-bottom: 8px; }
+  .price-card .price-desc { font-family: 'Inter', sans-serif; font-size: 14px; color: var(--mid-gray); font-weight: 400; text-align: center; margin-bottom: 24px; line-height: 1.5; }
+  .price-amount { text-align: center; margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .price-amount .amount { font-family: 'Space Grotesk', sans-serif; font-size: 36px; font-weight: 700; letter-spacing: -1px; color: var(--charcoal); }
+  .price-amount .period { font-family: 'Inter', sans-serif; font-size: 14px; color: var(--mid-gray); font-weight: 400; }
+  .price-features { list-style: none; margin-bottom: 32px; }
+  .price-features li { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.5; color: var(--mid-gray); font-weight: 400; padding: 8px 0; display: flex; align-items: flex-start; gap: 10px; }
+  .price-features li .pf-check { color: var(--sage); font-weight: 600; font-size: 16px; min-width: 20px; }
+  .price-btn { width: 100%; padding: 14px; border-radius: 100px; font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.3s; text-align: center; }
+  .price-btn-primary { background: var(--coral); color: white; border: none; box-shadow: 0 6px 16px rgba(224,120,86,0.25); }
+  .price-btn-primary:hover { background: var(--coral-dark); box-shadow: 0 8px 24px rgba(224,120,86,0.35); transform: translateY(-2px); }
+  .price-btn-outline { background: transparent; color: var(--charcoal); border: 2px solid var(--charcoal); }
+  .price-btn-outline:hover { background: var(--charcoal); color: white; }
+  .price-btn-secondary { background: transparent; color: var(--charcoal); border: 2px solid rgba(0,0,0,0.12); }
+  .price-btn-secondary:hover { border-color: var(--charcoal); }
+
+  /* MODAL */
+  .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); backdrop-filter: blur(4px); z-index: 1000; display: none; align-items: center; justify-content: center; padding: 20px; }
+  .modal-overlay.active { display: flex; animation: fadeIn 0.3s; }
+  .modal-content { background: white; border-radius: 24px; max-width: 680px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 48px 40px; position: relative; animation: slideUp 0.3s; }
+  @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  .modal-close { position: absolute; top: 20px; right: 20px; background: var(--sage-light); border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 20px; color: var(--sage-dark); transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; }
+  .modal-close:hover { background: var(--sage); color: white; transform: rotate(90deg); }
+  .modal-content h3 { font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -1px; margin-bottom: 8px; color: var(--charcoal); }
+  .modal-content .modal-subtitle { font-family: 'Inter', sans-serif; font-size: 15px; color: var(--sage); font-weight: 500; margin-bottom: 24px; }
+  .modal-content p { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7; color: var(--mid-gray); font-weight: 400; margin-bottom: 16px; }
+  .modal-content strong { color: var(--charcoal); font-weight: 600; }
+  .modal-list { list-style: none; margin: 20px 0; padding: 0; }
+  .modal-list li { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.6; color: var(--mid-gray); padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; align-items: flex-start; gap: 12px; }
+  .modal-list li .ml-check { color: var(--sage); font-weight: 700; font-size: 16px; min-width: 20px; }
+  @media (max-width: 768px) {
+    .modal-content { padding: 32px 24px; max-height: 90vh; }
+    .modal-content h3 { font-size: 26px; }
+  }
+
+  /* SUCCESS/ERROR MODAL */
+  .success-modal { text-align: center; padding: 56px 40px !important; }
+  .success-modal-icon { width: 80px; height: 80px; background: var(--sage-light); border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-size: 40px; color: var(--sage); animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+  @keyframes scaleIn { from { opacity: 0; transform: scale(0); } to { opacity: 1; transform: scale(1); } }
+  .success-modal h3 { font-size: 28px; margin-bottom: 12px; }
+  .success-modal p { font-size: 16px; margin-bottom: 32px; }
+  @media (max-width: 768px) {
+    .success-modal { padding: 40px 24px !important; }
+    .success-modal-icon { width: 64px; height: 64px; font-size: 32px; }
+    .success-modal h3 { font-size: 24px; }
+  }
+
+  /* QUIZ FORM */
+  .quiz-container { max-width: 640px; margin: 0 auto; }
+  .quiz-step { display: none; }
+  .quiz-step.active { display: block; animation: fadeIn 0.3s; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  .quiz-progress { display: flex; gap: 8px; margin-bottom: 40px; justify-content: center; }
+  .progress-dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(0,0,0,0.1); transition: all 0.3s; }
+  .progress-dot.active { background: var(--coral); width: 32px; border-radius: 6px; }
+  .quiz-question { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: -0.8px; text-align: center; margin-bottom: 40px; line-height: 1.2; color: var(--charcoal); }
+  .quiz-options { display: grid; gap: 12px; }
+  .quiz-option { background: white; border: 2px solid rgba(0,0,0,0.06); border-radius: 16px; padding: 20px 24px; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 400; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 12px; color: var(--charcoal); }
+  .quiz-option:hover { border-color: var(--sage); background: var(--sage-light); color: var(--charcoal); }
+  .quiz-option.selected { border-color: var(--coral); background: rgba(224,120,86,0.05); }
+  .quiz-option-icon { width: 48px; height: 48px; min-width: 48px; background: var(--sage-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+  .quiz-input { width: 100%; padding: 16px 20px; border: 2px solid rgba(0,0,0,0.06); border-radius: 12px; font-family: 'Inter', sans-serif; font-size: 16px; transition: all 0.3s; color: var(--charcoal); }
+  .quiz-input:focus { outline: none; border-color: var(--sage); }
+  .quiz-textarea { min-height: 120px; resize: vertical; }
+  .quiz-buttons { display: flex; gap: 12px; margin-top: 32px; justify-content: center; flex-wrap: wrap; }
+  .quiz-btn { padding: 14px 32px; border-radius: 100px; font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+  .quiz-btn-next { background: var(--coral); color: white; border: none; box-shadow: 0 6px 16px rgba(224,120,86,0.25); }
+  .quiz-btn-next:hover { background: var(--coral-dark); box-shadow: 0 8px 24px rgba(224,120,86,0.35); transform: translateY(-2px); }
+  .quiz-btn-back { background: transparent; color: var(--mid-gray); border: 2px solid rgba(0,0,0,0.12); }
+  .quiz-btn-back:hover { border-color: var(--charcoal); color: var(--charcoal); }
+  .quiz-success { text-align: center; padding: 60px 40px; }
+  .quiz-success-icon { width: 80px; height: 80px; background: var(--sage-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 40px; }
+  .quiz-success h3 { font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -1px; margin-bottom: 12px; color: var(--charcoal); }
+  .quiz-success p { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--mid-gray); font-weight: 400; line-height: 1.6; }
+
+  /* CTA SIMPLIFIED */
+  .cta-quiz { text-align: center; padding: 80px 60px; background: var(--charcoal); color: white; }
+  .cta-quiz h2 { font-family: 'Space Grotesk', sans-serif; font-size: 42px; font-weight: 700; letter-spacing: -1.5px; margin-bottom: 16px; color: white; }
+  .cta-quiz p { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 400; margin-bottom: 36px; line-height: 1.6; color: rgba(255,255,255,0.95); }
+  .cta-quiz-btn { font-family: 'Space Grotesk', sans-serif; background: white; color: var(--coral); border: none; padding: 18px 48px; border-radius: 100px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+  .cta-quiz-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,0.2); }
+
+  .footer { background: var(--charcoal); color: white; padding: 40px 60px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+  .footer .logo { color: white; }
+  .footer p { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 300; opacity: 0.5; }
+
+  /* MOBILE RESPONSIVE */
+  @media (max-width: 968px) {
+    .nav { padding: 16px 32px; }
+    .hero { grid-template-columns: 1fr; padding: 40px 32px; }
+    .hero h1 { font-size: 42px; }
+    section { padding: 60px 32px; }
+    section h2 { font-size: 36px; }
+    .cards-3, .cards-6 { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: repeat(2, 1fr); }
+    .feedback-grid, .cases-grid, .blogger-grid, .team-grid { grid-template-columns: 1fr; }
+    .pricing-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    .nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .mobile-menu-btn { display: block; }
+    .nav .cta-btn { padding: 10px 20px; font-size: 13px; }
+
+    .hero { gap: 40px; padding: 40px 24px 60px; }
+    .hero h1 { font-size: 36px; min-height: 80px; }
+    .hero-desc { font-size: 16px; }
+    .hero-image { height: 320px; }
+    .stats { gap: 24px; }
+
+    section { padding: 60px 24px; }
+    section h2 { font-size: 32px; }
+    .section-sub { font-size: 15px; }
+
+    .steps-grid { grid-template-columns: 1fr; }
+    .feedback-text h3 { font-size: 24px; }
+    .screenshot-placeholder { height: 280px; }
+    .blogger-image { height: 280px; }
+    .blogger-text .blogger-quote { font-size: 22px; }
+    .team-carousel { height: 360px; }
+
+    .quiz-question { font-size: 24px; }
+    .quiz-option { font-size: 15px; padding: 16px 20px; }
+
+    .cta-quiz { padding: 60px 24px; }
+    .cta-quiz h2 { font-size: 32px; }
+
+    .footer { padding: 32px 24px; flex-direction: column; text-align: center; }
+  }
+
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 28px; }
+    section h2 { font-size: 26px; }
+    .quiz-question { font-size: 20px; }
+    .cta-quiz h2 { font-size: 28px; }
+  }
+
+  /* Touch-friendly improvements */
+  button, .quiz-option, .faq-question, .price-card, .card, .card-sm, .step {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    .quiz-option, .faq-question { cursor: default; }
+  }
+  .mobile-menu { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--cream); z-index: 200; flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; align-items: center; gap: 28px; }
+  .mobile-menu a { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 600; color: var(--charcoal); text-decoration: none; }
+  .mobile-menu a:hover { color: var(--sage); }
+  .mobile-menu-close { position: absolute; top: 24px; right: 24px; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--charcoal); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="logo">Софья Поленова</div>
+  <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+  <ul class="nav-links">
+    <li><a href="#results">Результаты</a></li>
+    <li><a href="#method">Метод</a></li>
+    <li><a href="#team">Команда</a></li>
+    <li><a href="#pricing">Тарифы</a></li>
+    <li><a href="#quiz">Тест</a></li>
+  </ul>
+  <button class="cta-btn" onclick="document.getElementById('quiz').scrollIntoView({behavior: 'smooth'})">Записаться</button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
+  <ul>
+    <li><a href="#results" onclick="closeMobileMenu()">Результаты</a></li>
+    <li><a href="#method" onclick="closeMobileMenu()">Метод</a></li>
+    <li><a href="#team" onclick="closeMobileMenu()">Команда</a></li>
+    <li><a href="#pricing" onclick="closeMobileMenu()">Тарифы</a></li>
+    <li><a href="#quiz" onclick="closeMobileMenu()">Тест</a></li>
+  </ul>
+</div>
+
+<!-- HERO - СВЕТЛЫЙ -->
+<div class="hero" style="background: var(--cream);">
+  <div class="hero-text">
+    <div class="hero-tag">Комплексный подход к&nbsp;телу</div>
+    <h1>
+      <span class="static">Здоровое тело</span><br>
+      <span class="typed-text"></span><span class="cursor"></span>
+    </h1>
+    <p class="hero-desc">Тело, полное энергии, без болей и&nbsp;зажимов. Персональный план через питание, сон, восстановление и&nbsp;грамотные тренировки</p>
+    <div class="hero-btns">
+      <button class="hero-btn" onclick="document.getElementById('quiz').scrollIntoView({behavior: 'smooth'})">Пройти тест — получить план</button>
+      <button class="hero-btn-secondary" onclick="window.open('https://t.me/SofiaPolenova_bot?start=posture','_blank')">Бесплатный разбор осанки →</button>
+    </div>
+    <p class="hero-sub-caption">Тест займёт 2 минуты · Отвечу лично в течение 24 часов</p>
+    <div class="stats">
+      <div class="stat-item"><div class="stat-number">6+</div><div class="stat-label">лет опыта</div></div>
+      <div class="stat-item"><div class="stat-number">200+</div><div class="stat-label">клиентов</div></div>
+      <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">онлайн</div></div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <video autoplay muted loop playsinline>
+      <source src="sofya-hero-video.mp4" type="video/mp4">
+      <source src="sofya-hero-video.mov" type="video/quicktime">
+    </video>
+  </div>
+</div>
+
+<!-- ДЛЯ КОГО - ЗЕЛЁНЫЙ -->
+<section class="for-who bg-green" style="background: var(--green-bg);">
+  <div class="section-tag">Узнай себя</div>
+  <h2>Для кого это?</h2>
+  <p class="section-sub">Если хотя бы одно из&nbsp;этого про&nbsp;вас — я&nbsp;помогу прийти к&nbsp;результату</p>
+  <div class="cards-3">
+    <div class="card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+      </div>
+      <h3>К вечеру нет сил. Просыпаетесь уже уставшей</h3>
+      <p>Низкая энергия, постоянная усталость. Хочется просыпаться с&nbsp;лёгкостью и&nbsp;жить активно, а&nbsp;не&nbsp;«доживать» до&nbsp;выходных</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="23 4 23 10 17 10"/>
+          <polyline points="1 20 1 14 7 14"/>
+          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+        </svg>
+      </div>
+      <h3>Диеты, марафоны, зал — вес возвращается каждый раз</h3>
+      <p>Диеты, марафоны, зал без тренера. Вес возвращается, мотивация падает. Нужна система, которая станет образом жизни</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+          <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+        </svg>
+      </div>
+      <h3>Слишком много советов. Непонятно что работает именно для вас</h3>
+      <p>Слишком много противоречивой информации. Нужен чёткий план и&nbsp;уверенность, что&nbsp;всё делается правильно</p>
+    </div>
+  </div>
+</section>
+
+<!-- ЧТО ПОЛУЧИТЕ - СВЕТЛЫЙ -->
+<section class="services" style="background: var(--cream);">
+  <div class="section-tag">Ваш результат</div>
+  <h2>Что вы&nbsp;получите</h2>
+  <p class="section-sub">Конкретные изменения, которые вы&nbsp;почувствуете в&nbsp;теле и&nbsp;в&nbsp;жизни</p>
+  <div class="cards-6">
+    <div class="card-sm">
+      <div class="card-sm-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+      </div>
+      <div><h3>Лёгкое, энергичное тело</h3><p>Уходит лишний вес, появляется лёгкость и&nbsp;стабильная энергия на&nbsp;весь день</p></div>
+    </div>
+    <div class="card-sm">
+      <div class="card-sm-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.22a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"/>
+        </svg>
+      </div>
+      <div><h3>Ровная осанка без&nbsp;боли</h3><p>Уходят зажимы от&nbsp;сидячей работы, сутулость, боли в&nbsp;шее и&nbsp;пояснице</p></div>
+    </div>
+    <div class="card-sm">
+      <div class="card-sm-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7"/>
+          <rect x="14" y="3" width="7" height="7"/>
+          <rect x="14" y="14" width="7" height="7"/>
+          <rect x="3" y="14" width="7" height="7"/>
+        </svg>
+      </div>
+      <div><h3>Зал или дом — безопасно</h3><p>Грамотная программа с&nbsp;безопасной техникой, где&nbsp;бы вы&nbsp;ни&nbsp;тренировались</p></div>
+    </div>
+    <div class="card-sm">
+      <div class="card-sm-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </div>
+      <div><h3>Глубокий сон и&nbsp;восстановление</h3><p>Просыпаетесь отдохнувшими, стресс снижается, тело успевает восстановиться</p></div>
+    </div>
+    <div class="card-sm">
+      <div class="card-sm-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="6"/>
+          <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+        </svg>
+      </div>
+      <div><h3>Питание без&nbsp;диет</h3><p>Простая система питания без&nbsp;голодовок и&nbsp;подсчёта калорий, которая даёт результат</p></div>
+    </div>
+    <div class="card-sm">
+      <div class="card-sm-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9z"/>
+          <path d="M7 9V6a5 5 0 0 1 10 0v3"/>
+        </svg>
+      </div>
+      <div><h3>Форма после родов</h3><p>Вернуться в форму после родов — без страха навредить себе</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- КАК ЭТО РАБОТАЕТ - ЗЕЛЁНЫЙ -->
+<section class="steps bg-green" id="method" style="background: var(--green-bg);">
+  <div class="section-tag">Простой путь</div>
+  <h2>Как это работает</h2>
+  <p class="section-sub">Четыре шага от&nbsp;первого знакомства до&nbsp;тела, в&nbsp;котором вам&nbsp;хорошо</p>
+  <div class="steps-grid">
+    <div class="step"><div class="step-num">1</div><h3>Знакомство</h3><p>Рассказываете о&nbsp;себе: образ жизни, боли, цели. Я&nbsp;оцениваю осанку, подвижность и&nbsp;общее состояние</p></div>
+    <div class="step"><div class="step-num">2</div><h3>Персональный план</h3><p>Составляю программу тренировок, рекомендации по&nbsp;питанию, сну и&nbsp;восстановлению — под&nbsp;вашу жизнь</p></div>
+    <div class="step"><div class="step-num">3</div><h3>Работа и&nbsp;поддержка</h3><p>Тренируетесь по&nbsp;плану, я&nbsp;на&nbsp;связи: корректирую технику, отвечаю на&nbsp;вопросы, поддерживаю</p></div>
+    <div class="step"><div class="step-num">4</div><h3>Ощутимый результат</h3><p>Через 2–3&nbsp;месяца вы&nbsp;чувствуете разницу: энергия, лёгкость, уверенность</p></div>
+  </div>
+  <div class="steps-extras">
+    <div class="steps-extra-card">
+      <div style="flex: 1;">
+        <div style="display: flex; align-items: flex-start; gap: 16px;">
+          <div class="icon">💻</div>
+          <div>
+            <h4>Онлайн-тренировки 1&nbsp;на&nbsp;1</h4>
+            <p>По&nbsp;запросу подключаемся через Google&nbsp;Meet или&nbsp;Zoom. Поставлю технику в&nbsp;реальном времени — идеально, если&nbsp;тревожно идти в&nbsp;зал одной</p>
+          </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 16px; margin-top: 24px;">
+          <div class="icon">📊</div>
+          <div>
+            <h4>Созвоны для оценки прогресса</h4>
+            <p>1–2&nbsp;раза в&nbsp;месяц проводим промежуточный созвон: оцениваем результаты, корректируем план, разбираем вопросы</p>
+          </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 16px; margin-top: 24px;">
+          <div class="icon">🎯</div>
+          <div>
+            <h4>Доведу до&nbsp;результата по&nbsp;шагам</h4>
+            <p>Помогу дойти до&nbsp;конца и&nbsp;не&nbsp;слиться. Вы&nbsp;получаете систему, которая работает — шаг за&nbsp;шагом, без&nbsp;спешки и&nbsp;перегрузок</p>
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-placeholder" style="flex: 1; height: auto; min-height: 280px;">
+        <div class="ph-icon">💻</div>
+        <p>Скрины онлайн-тренировок<br>Google Meet / Zoom</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ОНЛАЙН ТРЕНИРОВКИ - СВЕТЛЫЙ -->
+<section style="background: var(--cream); padding: 80px 60px;">
+  <div class="section-tag">Как проходит работа</div>
+  <h2>Онлайн-тренировки вживую</h2>
+  <p class="section-sub">Разбираю технику в реальном времени — так же, как в зале. Клиенты тренируются из дома, отеля, зала — я всегда рядом</p>
+  <div class="training-carousel-wrap">
+    <div class="training-carousel-inner">
+      <div class="training-slide active">
+        <img src="training-1.jpg" alt="Онлайн тренировка — Альфина">
+      </div>
+      <div class="training-slide">
+        <img src="training-2.jpg" alt="Онлайн тренировка — Евгения">
+      </div>
+      <div class="training-slide">
+        <img src="training-3.jpg" alt="Онлайн тренировка — Альфина в зале">
+      </div>
+      <div class="training-slide">
+        <img src="training-4.jpg" alt="Онлайн тренировка — Google Meet">
+      </div>
+    </div>
+    <div class="training-nav">
+      <button class="carousel-btn" onclick="trainingPrev()">‹</button>
+      <button class="carousel-btn" onclick="trainingNext()">›</button>
+    </div>
+    <div class="training-dots">
+      <div class="training-dot active" onclick="goToTraining(0)"></div>
+      <div class="training-dot" onclick="goToTraining(1)"></div>
+      <div class="training-dot" onclick="goToTraining(2)"></div>
+      <div class="training-dot" onclick="goToTraining(3)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ОБРАТНАЯ СВЯЗЬ - СВЕТЛЫЙ -->
+<section class="feedback" style="background: var(--cream);">
+  <div class="section-tag">Полный контроль техники</div>
+  <h2>Не&nbsp;просто видео в&nbsp;чат</h2>
+  <p class="section-sub">Каждое ваше движение получает детальный разбор</p>
+  <div class="feedback-grid">
+    <div class="feedback-text">
+      <h3>Вы&nbsp;присылаете видео — я&nbsp;<span>разбираю</span> каждое упражнение</h3>
+      <p>Отмечаю ошибки, объясняю, что&nbsp;поправить и&nbsp;почему это важно. Если&nbsp;тревожно тренироваться одной — подключаемся по&nbsp;видео и&nbsp;работаем вместе.</p>
+      <ul class="feedback-features">
+        <li><span class="check">✓</span>Разбор каждого видео с&nbsp;комментариями</li>
+        <li><span class="check">✓</span>Голосовые и&nbsp;видео-ответы, не&nbsp;шаблоны</li>
+        <li><span class="check">✓</span>Тренировки 1&nbsp;на&nbsp;1 для&nbsp;постановки техники</li>
+        <li><span class="check">✓</span>Ежедневная обратная связь в&nbsp;мессенджере</li>
+        <li><span class="check">✓</span>Удобнее, чем смотреть общее видео на&nbsp;YouTube</li>
+        <li><span class="check">✓</span>Не&nbsp;нужно искать правильную технику самостоятельно</li>
+        <li><span class="check">✓</span>Вы&nbsp;получаете персональный разбор под вашу ситуацию</li>
+      </ul>
+    </div>
+    <div class="feedback-text">
+      <h3><span>Система</span> работы со&nbsp;здоровьем</h3>
+      <p>Я&nbsp;не&nbsp;прописываю жёсткую диету — работаю с&nbsp;вашим подходом к&nbsp;питанию и&nbsp;ритмом жизни. Вы&nbsp;учитесь понимать своё тело, а&nbsp;не&nbsp;следовать шаблонам.</p>
+      <p style="font-weight: 500; color: var(--sage); margin-top: 12px;">Можно бояться только одного — питания или&nbsp;тренировок. Я&nbsp;знаю, с&nbsp;чего начать именно с&nbsp;вами.</p>
+      <ul class="feedback-features">
+        <li><span class="check">✓</span>Питание без голодовок — поймёте что есть, чтобы чувствовать себя легко</li>
+        <li><span class="check">✓</span>Поймёте почему устаёте даже после выходных — и что с этим делать</li>
+        <li><span class="check">✓</span>Управление сном и&nbsp;энергией</li>
+        <li><span class="check">✓</span>Постепенное внедрение привычек</li>
+        <li><span class="check">✓</span>Комплексная работа в&nbsp;партнёрстве с&nbsp;врачами — подберу специалиста под вашу задачу</li>
+        <li><span class="check">✓</span>Не&nbsp;просто тренер — научу закрыть сферу здоровья под ключ 🔑</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA AFTER WHAT YOU GET -->
+<div style="text-align: center; margin: 0; padding: 48px 20px; background: var(--cream);">
+  <button class="hero-btn" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">Хочу такой результат → пройти тест</button>
+</div>
+
+<!-- БЕСПЛАТНЫЙ РАЗБОР -->
+<section id="free-consult" style="background: var(--charcoal); color: white; padding: 80px 60px; text-align: center;">
+  <div class="section-tag" style="color: var(--sage);">Бесплатно</div>
+  <h2 style="color: white; margin-bottom: 16px;">Разбор вашей осанки за 15 минут</h2>
+  <p style="color: rgba(255,255,255,0.85); font-size: 17px; max-width: 560px; margin: 0 auto 16px; line-height: 1.7;">Пришлите 2 фото — спереди и сбоку в полный рост. Я лично разберу что происходит с вашим телом и почему не работают тренировки.</p>
+  <p style="color: var(--sage); font-size: 14px; margin-bottom: 36px; font-weight: 500;">⚡ Беру 5 человек в неделю · Отвечу в течение 24 часов</p>
+  <button class="cta-quiz-btn" onclick="window.open('https://t.me/SofiaPolenova_bot?start=posture','_blank')">Записаться на бесплатный разбор</button>
+</section>
+
+<!-- КЕЙСЫ - ЗЕЛЁНЫЙ -->
+<section class="cases bg-green" id="results" style="background: var(--green-bg);">
+  <div class="section-tag">Реальные истории</div>
+  <h2>Кейсы и&nbsp;результаты</h2>
+  <p class="section-sub">Каждый кейс — это реальный человек с&nbsp;реальными ограничениями и&nbsp;реальным результатом</p>
+  <div class="cases-grid">
+    <div class="case-card">
+      <div class="case-photo elena">Фото Елены до / после</div>
+      <div class="case-body">
+        <h3>Елена, 26&nbsp;лет</h3>
+        <div class="case-meta">Результат за&nbsp;3&nbsp;месяца</div>
+        <div class="case-pain-result">
+          <div class="case-pain">
+            <h4>Запрос/Боль</h4>
+            <ul>
+              <li>Сидячая работа, весь день за&nbsp;компьютером</li>
+              <li>Нет времени на&nbsp;тренировки</li>
+              <li>Боли в&nbsp;спине и&nbsp;шее</li>
+              <li>Вегетарианка — нужен план без&nbsp;мяса</li>
+            </ul>
+          </div>
+          <div class="case-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+          <div class="case-result">
+            <h4>Результат</h4>
+            <ul>
+              <li>15 минут коррекции в&nbsp;день</li>
+              <li>Боли в&nbsp;спине ушли полностью</li>
+              <li>+5 кг мышц, рельефное тело</li>
+              <li>Подтянутые ягодицы, уверенность</li>
+            </ul>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="case-tag">Сидячая работа</span>
+          <span class="case-tag">Мало времени</span>
+          <span class="case-tag">Вегетарианка</span>
+          <span class="case-tag">Рекомпозиция тела</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-card">
+      <div class="case-photo blogger">Фото блогера</div>
+      <div class="case-body">
+        <h3>Женя Долинина @jenny.ration</h3>
+        <div class="case-meta">Блогер с аудиторией 100К+ · тренировки через всю беременность · 2024</div>
+        <p>Ведёт популярный блог и&nbsp;тренируется со&nbsp;мной через всю беременность. Безопасный подход, контроль нагрузки, подготовка тела к&nbsp;родам. Если&nbsp;она доверяет мне в&nbsp;такой важный период — вы&nbsp;тоже можете.</p>
+        <div class="case-tags">
+          <span class="case-tag">Беременность</span>
+          <span class="case-tag">Безопасный подход</span>
+          <span class="case-tag">Подготовка к&nbsp;родам</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 48px;">
+    <button class="hero-btn" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">Хочу историю с таким же результатом</button>
+  </div>
+</section>
+
+<!-- БЛОГЕР ТРИГГЕР - ЧЁРНЫЙ -->
+<section class="blogger-case" style="background: var(--charcoal); color: white;">
+  <div class="section-tag">Специализация</div>
+  <h2>Беременность и&nbsp;восстановление<br>после&nbsp;родов</h2>
+  <p class="section-sub">Одно из&nbsp;моих сильнейших направлений — вы&nbsp;можете быть в&nbsp;форме на&nbsp;каждом этапе</p>
+  <div class="blogger-grid">
+    <div class="blogger-image"></div>
+    <div class="blogger-text">
+      <div class="blogger-quote">Подготовка, тренировки во&nbsp;время беременности и&nbsp;<span>безопасное восстановление</span> после родов</div>
+
+      <p style="font-weight: 500; color: rgba(255,255,255,0.9); margin-bottom: 20px;">❌ <strong>«Боюсь навредить ребёнку»</strong><br>
+      ✅ Безопасные нагрузки с&nbsp;учётом триместра и&nbsp;самочувствия. Работаем только с&nbsp;проверенными упражнениями, никакого риска.</p>
+
+      <p style="font-weight: 500; color: rgba(255,255,255,0.9); margin-bottom: 20px;">❌ <strong>«Нет сил, слишком устаю»</strong><br>
+      ✅ Лёгкие тренировки дают энергию, а&nbsp;не&nbsp;забирают. Вы&nbsp;будете чувствовать себя лучше, а&nbsp;не&nbsp;хуже.</p>
+
+      <p style="font-weight: 500; color: rgba(255,255,255,0.9); margin-bottom: 20px;">❌ <strong>«Не&nbsp;знаю, что можно, а&nbsp;что нельзя»</strong><br>
+      ✅ Я&nbsp;знаю. Составлю безопасный план, адаптированный под ваш срок и&nbsp;особенности. Работа с&nbsp;диастазом, укрепление тазового дна, подготовка к&nbsp;родам.</p>
+
+      <div class="blogger-tags">
+        <span class="blogger-tag">Подготовка к&nbsp;беременности</span>
+        <span class="blogger-tag">Тренировки для&nbsp;беременных</span>
+        <span class="blogger-tag">Восстановление после родов</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- КОМАНДА - СВЕТЛЫЙ -->
+<section class="team" id="team" style="background: var(--cream);">
+  <div class="section-tag">Кто я</div>
+  <h2>Софья Поленова</h2>
+  <p class="section-sub">Единственный онлайн-тренер с врачом в команде — работаем по вашим анализам</p>
+
+  <!-- СОФЬЯ ПЕРВАЯ -->
+  <div class="team-grid">
+    <div class="team-carousel">
+      <div class="carousel-container">
+        <div class="carousel-slide active">
+          <img src="sofya-photo.jpeg" alt="Софья Поленова" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="carousel-slide">
+          <img src="sofya-diploma.jpeg" alt="Диплом бакалавра с отличием" style="width:100%;height:100%;object-fit:contain;background:#f5f4f0;">
+        </div>
+        <div class="carousel-slide">
+          <img src="sofya-transcript.jpeg" alt="Приложение к диплому" style="width:100%;height:100%;object-fit:contain;background:#f5f4f0;">
+        </div>
+        <div class="carousel-slide">
+          <img src="sofya-cert-tbs.jpeg" alt="Сертификат — ТБС и ягодицы" style="width:100%;height:100%;object-fit:contain;background:#f5f4f0;">
+        </div>
+        <div class="carousel-slide">
+          <img src="sofya-cert-spine.jpeg" alt="Сертификат — Позвоночник. Стабильность" style="width:100%;height:100%;object-fit:contain;background:#f5f4f0;">
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-btn" onclick="carouselPrev()">‹</button>
+        <button class="carousel-btn" onclick="carouselNext()">›</button>
+      </div>
+      <div class="carousel-dots">
+        <div class="carousel-dot active" onclick="goToSlide(0)"></div>
+        <div class="carousel-dot" onclick="goToSlide(1)"></div>
+        <div class="carousel-dot" onclick="goToSlide(2)"></div>
+        <div class="carousel-dot" onclick="goToSlide(3)"></div>
+        <div class="carousel-dot" onclick="goToSlide(4)"></div>
+      </div>
+    </div>
+    <div class="team-text">
+      <h3>Софья Поленова</h3>
+      <div class="team-role">Тренер-наставник, нутрициолог</div>
+      <p>Я&nbsp;чуть больше, чем тренер. Я&nbsp;тренер-наставник, помогаю создавать образ жизни, снимаю контроль за&nbsp;целой сферой — выстраиваю режим тренировок&nbsp;+ питания&nbsp;+ сна&nbsp;+ восстановления&nbsp;+ БАДов.</p>
+      <p>Как тренер, сочетаю локальные коррекционные упражнения (стопы, дыхание, осанка) с&nbsp;силовыми тренировками в&nbsp;зале и&nbsp;дома.</p>
+      <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; margin-top: 20px; margin-bottom: 12px; color: var(--charcoal);">Почему мне можно доверять?</h4>
+      <ul class="team-creds">
+        <li><span class="tc-dot"></span>Высшее тренерское образование и&nbsp;повышения квалификации (см.&nbsp;в&nbsp;карусели)</li>
+        <li><span class="tc-dot"></span>6+ лет тренерского опыта, онлайн и&nbsp;офлайн тренировок</li>
+        <li><span class="tc-dot"></span>Учусь на&nbsp;физического терапевта</li>
+        <li><span class="tc-dot"></span>Работаю в&nbsp;связке с&nbsp;эндокринологом, нутрициологом, психологом</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- СВЯЗКА КОМАНДА -->
+  <div style="text-align: center; margin: 48px auto 32px; max-width: 560px;">
+    <p style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600; color: var(--charcoal);">+ врач-консультант в команде</p>
+    <p style="font-family: 'Inter', sans-serif; color: var(--mid-gray); font-size: 15px; margin-top: 8px; line-height: 1.6;">После анализов крови Евгений назначает необходимые БАДы и корректирует программу. Такого нет у других онлайн-тренеров.</p>
+  </div>
+
+  <!-- ВРАЧ-КОНСУЛЬТАНТ ВТОРОЙ -->
+  <div class="team-grid" style="margin-top: 0;">
+    <div style="background: linear-gradient(135deg, #e0e8e2 0%, #d0dcd4 100%); border-radius: 20px; height: 360px; display: flex; align-items: center; justify-content: center; font-family: 'Inter', sans-serif; font-size: 14px; color: var(--mid-gray);">Фото врача</div>
+    <div class="team-text">
+      <h3>Крамской Евгений</h3>
+      <div class="team-role">Врач-консультант</div>
+      <p>После получения результатов анализов врач проводит консультацию и&nbsp;назначает необходимые БАДы и&nbsp;препараты. На&nbsp;основе его мнения составляется индивидуальный план питания и&nbsp;подбирается режим тренировок.</p>
+      <ul class="team-creds">
+        <li><span class="tc-dot"></span>СПбГПМУ, специальность «Педиатрия», с&nbsp;отличием</li>
+        <li><span class="tc-dot"></span>Клиническая ординатура, «Урология»</li>
+        <li><span class="tc-dot"></span>СЗМУ им.&nbsp;Мечникова — общая врачебная практика, семейная медицина</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ - ЗЕЛЁНЫЙ -->
+<section class="faq bg-green" id="faq" style="background: var(--green-bg);">
+  <div class="section-tag">Частые вопросы</div>
+  <h2>Всё, что&nbsp;вы&nbsp;хотели спросить</h2>
+  <p class="section-sub">Ответы на&nbsp;вопросы, которые задают чаще всего</p>
+  <div class="faq-list">
+    <div class="faq-item open">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <span>У&nbsp;меня нет времени на&nbsp;тренировки</span>
+        <span class="arrow">▾</span>
+      </div>
+      <div class="faq-answer">Программа адаптируется под&nbsp;ваш график. Кому-то хватает 3&nbsp;тренировок по&nbsp;40&nbsp;минут в&nbsp;неделю, кому-то подходят короткие домашние сессии. Главное — регулярность. Кейс Лены: репетитор, весь день за&nbsp;компьютером — и&nbsp;полная рекомпозиция тела за&nbsp;3&nbsp;месяца.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <span>Онлайн-тренер — это&nbsp;несерьёзно</span>
+        <span class="arrow">▾</span>
+      </div>
+      <div class="faq-answer">Я&nbsp;разбираю каждое ваше видео, отмечаю ошибки и&nbsp;объясняю, как&nbsp;исправить. При&nbsp;необходимости подключаемся через Zoom и&nbsp;тренируемся вместе. Многие клиенты отмечают, что&nbsp;получают больше внимания, чем&nbsp;с&nbsp;тренером в&nbsp;зале.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <span>Есть проблемы со&nbsp;здоровьем — мне&nbsp;можно?</span>
+        <span class="arrow">▾</span>
+      </div>
+      <div class="faq-answer">В&nbsp;большинстве случаев — да. Работаю с&nbsp;учётом ваших ограничений: суставы, спина, травмы, беременность. В&nbsp;премиум-тарифе подключаю врача и&nbsp;строю программу на&nbsp;основе анализов. Если&nbsp;что-то выходит за&nbsp;рамки компетенции — порекомендую специалиста.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <span>Как быстро будет результат?</span>
+        <span class="arrow">▾</span>
+      </div>
+      <div class="faq-answer">Самочувствие меняется через 2–3&nbsp;недели: больше энергии, лучше сон. Визуальные изменения — через 2–3&nbsp;месяца. Не&nbsp;обещаю «минус 10&nbsp;кг за&nbsp;неделю» — даю устойчивый результат, который останется с&nbsp;вами.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <span>Боюсь идти в&nbsp;зал одна</span>
+        <span class="arrow">▾</span>
+      </div>
+      <div class="faq-answer">Два варианта. Первый: программа домашних тренировок с&nbsp;полным результатом. Второй: тренируемся вместе через Zoom — ставлю технику, показываю упражнения, вы&nbsp;обретаете уверенность. Многие начинают с&nbsp;дома и&nbsp;позже спокойно идут в&nbsp;зал.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <span>Я&nbsp;вегетарианка / у&nbsp;меня ограничения в&nbsp;питании</span>
+        <span class="arrow">▾</span>
+      </div>
+      <div class="faq-answer">Без проблем. План питания адаптируется под&nbsp;любые ограничения. Елена — вегетарианка, и&nbsp;мы&nbsp;добились отличной рекомпозиции тела без&nbsp;единого грамма мяса.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        <span>Планирую беременность / беременна — можно?</span>
+        <span class="arrow">▾</span>
+      </div>
+      <div class="faq-answer">Да, это одно из&nbsp;моих сильных направлений. Сейчас веду крупного блогера через беременность. Безопасные тренировки, подготовка тела, мягкое восстановление после — всё с&nbsp;учётом медицинских рекомендаций.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ТАРИФЫ - СВЕТЛЫЙ -->
+<section class="pricing" id="pricing" style="background: var(--cream);">
+  <div class="section-tag">Инвестиция в&nbsp;себя</div>
+  <h2>Выберите свой формат</h2>
+  <p class="section-sub">Персональная работа, а&nbsp;не&nbsp;шаблонная программа</p>
+  <div class="pricing-grid">
+
+    <!-- ТАРИФ 1: ДЛЯ ТЕХ, КТО ХОЧЕТ ПОПРОБОВАТЬ -->
+    <div class="price-card">
+      <h3>Хочу понять с чего начать</h3>
+      <p class="price-subtitle">Первый шаг без&nbsp;обязательств</p>
+      <p class="price-desc">Если ты&nbsp;ещё не&nbsp;готова менять всё и&nbsp;сразу, но&nbsp;чувствуешь, что изменения нужны — тебе сюда</p>
+      <div class="price-amount">
+        <div class="amount">4 990 ₽</div>
+        <div class="period">разово · 1 консультация</div>
+      </div>
+      <ul class="price-features">
+        <li><span class="pf-check">✓</span>Анализ вашего образа жизни и&nbsp;целей</li>
+        <li><span class="pf-check">✓</span>Тесты осанки и&nbsp;оценка тела</li>
+        <li><span class="pf-check">✓</span>Комплекс упражнений на&nbsp;10–15 мин/день</li>
+        <li><span class="pf-check">✓</span>Базовые рекомендации по&nbsp;питанию</li>
+      </ul>
+      <button class="price-btn price-btn-secondary" onclick="openModal('modal-tariff-1')">Подробнее</button>
+      <button class="price-btn price-btn-primary" style="margin-top: 8px;" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">Выбрать этот тариф</button>
+    </div>
+
+    <!-- ТАРИФ 2: ВЫСТРОЙ БАЗУ -->
+    <div class="price-card featured">
+      <div class="price-badge">Популярный выбор</div>
+      <h3>Готова меняться системно</h3>
+      <p class="price-subtitle">Системный подход к&nbsp;телу</p>
+      <p class="price-desc">Полное сопровождение: тренировки, питание, восстановление. Ежедневная обратная связь</p>
+      <div class="price-amount">
+        <div class="amount">14 990 ₽</div>
+        <div class="period">/ месяц</div>
+      </div>
+      <ul class="price-features">
+        <li><span class="pf-check">✓</span>Индивидуальная программа тренировок</li>
+        <li><span class="pf-check">✓</span>Разбор техники по&nbsp;видео</li>
+        <li><span class="pf-check">✓</span>План питания и&nbsp;восстановления</li>
+        <li><span class="pf-check">✓</span>1–2 созвона в&nbsp;месяц</li>
+        <li><span class="pf-check">✓</span>Ежедневная поддержка в&nbsp;мессенджере</li>
+      </ul>
+      <button class="price-btn price-btn-primary" onclick="openModal('modal-tariff-2')">Подробнее</button>
+      <button class="price-btn price-btn-primary" style="margin-top: 8px;" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">Выбрать этот тариф</button>
+      <p style="text-align: center; font-size: 12px; color: var(--light-gray); margin-top: 12px;">Если после первой недели поймёте что это не ваше — верну деньги без вопросов</p>
+    </div>
+
+    <!-- ТАРИФ 3: МАКСИМАЛЬНЫЙ РЕЗУЛЬТАТ -->
+    <div class="price-card">
+      <h3>Всё под контролем — с врачом</h3>
+      <p class="price-subtitle">VIP-сопровождение с&nbsp;врачом</p>
+      <p class="price-desc">Если нужен гарантированный результат и&nbsp;полный контроль здоровья — работа по&nbsp;анализам с&nbsp;врачом</p>
+      <div class="price-amount">
+        <div class="amount">24 990 — 44 990 ₽</div>
+        <div class="period">/ месяц</div>
+      </div>
+      <ul class="price-features">
+        <li><span class="pf-check">✓</span>Всё из&nbsp;тарифа «Выстрой базу»</li>
+        <li><span class="pf-check">✓</span>Онлайн-тренировки 1 на&nbsp;1</li>
+        <li><span class="pf-check">✓</span>Работа с&nbsp;врачом по&nbsp;анализам</li>
+        <li><span class="pf-check">✓</span>Персональный дневник и&nbsp;отчёты</li>
+        <li><span class="pf-check">✓</span>Консультации по&nbsp;БАДам и&nbsp;препаратам</li>
+      </ul>
+      <button class="price-btn price-btn-outline" onclick="openModal('modal-tariff-3')">Подробнее</button>
+      <button class="price-btn price-btn-primary" style="margin-top: 8px;" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">Выбрать этот тариф</button>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ FORM - ЗЕЛЁНЫЙ -->
+<section class="quiz-form bg-green" id="quiz" style="background: var(--green-bg);">
+  <div class="section-tag">Подберём программу</div>
+  <h2>Ответьте на 5 вопросов — скажу что именно мешает вам получить результат</h2>
+  <p class="section-sub">Займёт 2 минуты. Отвечу лично — не бот, не шаблон</p>
+
+  <div class="quiz-container">
+    <div class="quiz-progress">
+      <div class="progress-dot active"></div>
+      <div class="progress-dot"></div>
+      <div class="progress-dot"></div>
+      <div class="progress-dot"></div>
+      <div class="progress-dot"></div>
+    </div>
+
+    <!-- STEP 1: ЦЕЛЬ -->
+    <div class="quiz-step active" data-step="1">
+      <h3 class="quiz-question">Какая у&nbsp;вас главная цель?</h3>
+      <div class="quiz-options">
+        <div class="quiz-option" onclick="selectOption(this, 'goal', 'body-quality')">
+          <div class="quiz-option-icon">✨</div>
+          <div>Изменить качество тела</div>
+        </div>
+        <div class="quiz-option" onclick="selectOption(this, 'goal', 'muscle')">
+          <div class="quiz-option-icon">💪</div>
+          <div>Набрать мышечную массу и&nbsp;улучшить рельеф</div>
+        </div>
+        <div class="quiz-option" onclick="selectOption(this, 'goal', 'health')">
+          <div class="quiz-option-icon">❤️</div>
+          <div>Улучшить здоровье, убрать боли, больше энергии</div>
+        </div>
+        <div class="quiz-option" onclick="selectOption(this, 'goal', 'pregnancy')">
+          <div class="quiz-option-icon">🤰</div>
+          <div>Подготовка к&nbsp;беременности или&nbsp;восстановление после родов</div>
+        </div>
+        <div class="quiz-option" onclick="selectOption(this, 'goal', 'unsure')">
+          <div class="quiz-option-icon">🤔</div>
+          <div>Пока не&nbsp;знаю — хочу что-то изменить, но&nbsp;не&nbsp;понимаю что</div>
+        </div>
+      </div>
+      <div class="quiz-buttons">
+        <button class="quiz-btn quiz-btn-next" onclick="nextStep()" disabled>Далее</button>
+      </div>
+    </div>
+
+    <!-- STEP 2: ОПЫТ -->
+    <div class="quiz-step" data-step="2">
+      <h3 class="quiz-question">Какой у&nbsp;вас опыт тренировок?</h3>
+      <div class="quiz-options">
+        <div class="quiz-option" onclick="selectOption(this, 'experience', 'never')">
+          <div class="quiz-option-icon">🆕</div>
+          <div>Никогда не&nbsp;занималась&nbsp;— хочу начать с&nbsp;нуля</div>
+        </div>
+        <div class="quiz-option" onclick="selectOption(this, 'experience', 'had-trainer')">
+          <div class="quiz-option-icon">👨‍🏫</div>
+          <div>Занималась с&nbsp;тренером раньше, но&nbsp;сейчас не&nbsp;тренируюсь</div>
+        </div>
+        <div class="quiz-option" onclick="selectOption(this, 'experience', 'tried-alone')">
+          <div class="quiz-option-icon">💭</div>
+          <div>Пробовала заниматься сама — не хватало системы</div>
+        </div>
+        <div class="quiz-option" onclick="selectOption(this, 'experience', 'irregular')">
+          <div class="quiz-option-icon">🔄</div>
+          <div>Занимаюсь нерегулярно, без системы</div>
+        </div>
+        <div class="quiz-option" onclick="selectOption(this, 'experience', 'trains-no-nutrition')">
+          <div class="quiz-option-icon">🏋️</div>
+          <div>Тренируюсь регулярно, но&nbsp;не&nbsp;слежу за&nbsp;питанием</div>
+        </div>
+        <div class="quiz-option" onclick="selectOption(this, 'experience', 'active-with-plan')">
+          <div class="quiz-option-icon">🔥</div>
+          <div>Активно занимаюсь, следую плану тренировок</div>
+        </div>
+      </div>
+      <div class="quiz-buttons">
+        <button class="quiz-btn quiz-btn-back" onclick="prevStep()">Назад</button>
+        <button class="quiz-btn quiz-btn-next" onclick="nextStep()" disabled>Далее</button>
+      </div>
+    </div>
+
+    <!-- STEP 3: МЕСТО -->
+    <div class="quiz-step" data-step="3">
+      <h3 class="quiz-question">Где вы&nbsp;предпочитаете тренироваться?</h3>
+      <div class="quiz-options">
+        <div class="quiz-option" onclick="selectOption(this, 'location', 'home')">
+          <div class="quiz-option-icon">🏠</div>
+          <div>Дома (с&nbsp;минимальным оборудованием)</div>
+        </div>
+        <div class="quiz-option" onclick="selectOption(this, 'location', 'gym')">
+          <div class="quiz-option-icon">🏋️</div>
+          <div>В&nbsp;тренажёрном зале</div>
+        </div>
+        <div class="quiz-option" onclick="selectOption(this, 'location', 'flexible')">
+          <div class="quiz-option-icon">🔀</div>
+          <div>Без разницы, готова к&nbsp;любому варианту</div>
+        </div>
+      </div>
+      <div class="quiz-buttons">
+        <button class="quiz-btn quiz-btn-back" onclick="prevStep()">Назад</button>
+        <button class="quiz-btn quiz-btn-next" onclick="nextStep()" disabled>Далее</button>
+      </div>
+    </div>
+
+    <!-- STEP 4: ОГРАНИЧЕНИЯ -->
+    <div class="quiz-step" data-step="4">
+      <h3 class="quiz-question">Есть&nbsp;ли у&nbsp;вас ограничения по&nbsp;здоровью?</h3>
+      <div class="quiz-options">
+        <div class="quiz-option" onclick="selectOption(this,'limitations','back')">
+          <div class="quiz-option-icon">🔴</div>
+          <div>Боли в спине или пояснице</div>
+        </div>
+        <div class="quiz-option" onclick="selectOption(this,'limitations','joints')">
+          <div class="quiz-option-icon">🦵</div>
+          <div>Проблемы с суставами или коленями</div>
+        </div>
+        <div class="quiz-option" onclick="selectOption(this,'limitations','pregnancy')">
+          <div class="quiz-option-icon">🤰</div>
+          <div>Беременность или послеродовой период</div>
+        </div>
+        <div class="quiz-option" onclick="selectOption(this,'limitations','none')">
+          <div class="quiz-option-icon">✅</div>
+          <div>Нет ограничений</div>
+        </div>
+        <div class="quiz-option" onclick="selectOption(this,'limitations','other')">
+          <div class="quiz-option-icon">✏️</div>
+          <div>Другое — напишу в следующем шаге</div>
+        </div>
+      </div>
+      <div class="quiz-buttons">
+        <button class="quiz-btn quiz-btn-back" onclick="prevStep()">Назад</button>
+        <button class="quiz-btn quiz-btn-next" onclick="nextStep()" disabled>Далее</button>
+      </div>
+    </div>
+
+    <!-- STEP 5: КОНТАКТЫ -->
+    <div class="quiz-step" data-step="5">
+      <h3 class="quiz-question">Как с&nbsp;вами связаться?</h3>
+      <p style="text-align: center; color: var(--subtitle-on-green); font-size: 14px; margin-bottom: 16px; font-weight: 500;">Оставьте контакты, я&nbsp;свяжусь с&nbsp;вами в&nbsp;течение 24&nbsp;часов</p>
+      <p style="text-align: center; color: var(--sage); font-size: 13px; margin-bottom: 24px; font-weight: 500;">💡 Если не знаете, что написать — поставьте смайлик или 0</p>
+      <input type="text" class="quiz-input" placeholder="Ваше имя" style="margin-bottom: 12px;" oninput="checkContactForm()">
+      <input type="tel" class="quiz-input" placeholder="Телефон или Telegram" style="margin-bottom: 12px;" oninput="checkContactForm()">
+      <input type="email" class="quiz-input" placeholder="Email (необязательно)" style="margin-bottom: 12px;">
+      <div class="quiz-buttons">
+        <button class="quiz-btn quiz-btn-back" onclick="prevStep()">Назад</button>
+        <button class="quiz-btn quiz-btn-next" onclick="submitQuiz()" disabled>Отправить</button>
+      </div>
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="quiz-step" data-step="success">
+      <div class="quiz-success">
+        <div class="quiz-success-icon">✓</div>
+        <h3>Заявка получена!</h3>
+        <p>Я уже вижу ваши ответы.<br>Напишу вам лично сегодня до 20:00 по Москве — не шаблон, а конкретный разбор вашей ситуации.</p>
+        <p style="margin-top: 16px; font-size: 14px; color: var(--sage); font-weight: 500;">Пока ждёте — подпишитесь на Instagram, там каждый день полезное про здоровье и тело</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA УПРОЩЁННЫЙ - ЧЁРНЫЙ -->
+<div class="cta-quiz">
+  <h2>Не&nbsp;знаете, с&nbsp;чего начать?</h2>
+  <p>Пройдите короткий тест выше, и&nbsp;я&nbsp;свяжусь с&nbsp;вами для&nbsp;бесплатной консультации</p>
+  <p style="font-size: 16px; margin-top: 16px; opacity: 0.9;">Или напишите мне напрямую:</p>
+  <div style="display: flex; gap: 16px; justify-content: center; margin-top: 24px; flex-wrap: wrap;">
+    <button class="cta-quiz-btn">📱 WhatsApp</button>
+    <button class="cta-quiz-btn">✈️ Telegram</button>
+  </div>
+</div>
+
+<!-- MODAL WINDOWS -->
+<div class="modal-overlay" id="modal-tariff-1" onclick="if(event.target === this) closeModal('modal-tariff-1')">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modal-tariff-1')">✕</button>
+    <h3>Для тех, кто хочет попробовать</h3>
+    <p class="modal-subtitle">Первый шаг без обязательств · 4 990 ₽ разово</p>
+    <p><strong>Если хочешь:</strong></p>
+    <ul class="modal-list">
+      <li><span class="ml-check">✓</span>Понять, с чего начать и что делать</li>
+      <li><span class="ml-check">✓</span>Получить персональный комплекс упражнений</li>
+      <li><span class="ml-check">✓</span>Узнать, какие у тебя дисбалансы и зажимы</li>
+    </ul>
+    <p><strong>Если не готова переворачивать жизнь с ног на голову...</strong><br>Но хочешь помочь себе минимальными действиями.</p>
+    <p><strong>1 час — и я расскажу тебе персонально, что делать.</strong> Выдам комплекс упражнений на 10–15 минут в день.</p>
+    <p><strong>После этого ты получишь:</strong></p>
+    <ul class="modal-list">
+      <li><span class="ml-check">✓</span>Понимание своего тела и его проблемных зон</li>
+      <li><span class="ml-check">✓</span>Конкретный план действий — без напряга</li>
+      <li><span class="ml-check">✓</span>Первые результаты уже через 2–3 недели</li>
+    </ul>
+    <button class="price-btn price-btn-primary" style="width: 100%; margin-top: 24px;" onclick="closeModal('modal-tariff-1'); document.getElementById('quiz').scrollIntoView({behavior: 'smooth'})">Записаться на консультацию</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-tariff-2" onclick="if(event.target === this) closeModal('modal-tariff-2')">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modal-tariff-2')">✕</button>
+    <h3>Выстрой базу</h3>
+    <p class="modal-subtitle">Системный подход к телу · 14 990 ₽ / месяц</p>
+    <p><strong>Результат:</strong> Тело, которое не болит. Энергия на весь день. Уверенность в себе.</p>
+    <p><strong>Формула здорового тела = тренировки + питание + восстановление</strong></p>
+
+    <p style="margin-top: 20px;"><strong>🏋️ Блок про спорт:</strong></p>
+    <ul class="modal-list">
+      <li><span class="ml-check">✓</span>Индивидуальная программа тренировок (зал или дом)</li>
+      <li><span class="ml-check">✓</span>Разбор каждого видео с комментариями</li>
+      <li><span class="ml-check">✓</span>Коррекция осанки и устранение дисбалансов</li>
+      <li><span class="ml-check">✓</span>Безопасная техника — никаких травм</li>
+    </ul>
+
+    <p style="margin-top: 20px;"><strong>🍽 Питание:</strong></p>
+    <ul class="modal-list">
+      <li><span class="ml-check">✓</span>План питания под твои цели (без голодовок)</li>
+      <li><span class="ml-check">✓</span>Работаю с любыми ограничениями (вегетарианство, непереносимости)</li>
+      <li><span class="ml-check">✓</span>Учу понимать своё тело, а не следовать шаблонам</li>
+    </ul>
+
+    <p style="margin-top: 20px;"><strong>💤 Восстановление:</strong></p>
+    <ul class="modal-list">
+      <li><span class="ml-check">✓</span>Управление сном и энергией</li>
+      <li><span class="ml-check">✓</span>Работа со стрессом и перегрузками</li>
+      <li><span class="ml-check">✓</span>1–2 созвона в месяц для оценки прогресса</li>
+    </ul>
+
+    <button class="price-btn price-btn-primary" style="width: 100%; margin-top: 24px;" onclick="closeModal('modal-tariff-2'); document.getElementById('quiz').scrollIntoView({behavior: 'smooth'})">Выбрать этот тариф</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-tariff-3" onclick="if(event.target === this) closeModal('modal-tariff-3')">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modal-tariff-3')">✕</button>
+    <h3>Максимальный результат</h3>
+    <p class="modal-subtitle">VIP-сопровождение с врачом · от 24 990 ₽ / месяц</p>
+    <p><strong>Для тех, кто хочет гарантированный результат и полный контроль здоровья.</strong></p>
+
+    <p style="margin-top: 20px;"><strong>Всё из тарифа «Выстрой базу» +</strong></p>
+    <ul class="modal-list">
+      <li><span class="ml-check">✓</span>Онлайн-тренировки 1 на 1 (2–3 раза в неделю)</li>
+      <li><span class="ml-check">✓</span>Работа с врачом на основе анализов крови</li>
+      <li><span class="ml-check">✓</span>Подбор БАДов и препаратов под твоё состояние</li>
+      <li><span class="ml-check">✓</span>Персональный дневник прогресса с отчётами</li>
+      <li><span class="ml-check">✓</span>Приоритетная поддержка в мессенджере</li>
+    </ul>
+
+    <p style="margin-top: 20px;"><strong>Кому подходит:</strong></p>
+    <p>Если у тебя есть проблемы со здоровьем (гормоны, щитовидка, хронические боли) и ты хочешь работать системно — с врачом, анализами и под контролем специалистов.</p>
+
+    <button class="price-btn price-btn-primary" style="width: 100%; margin-top: 24px;" onclick="closeModal('modal-tariff-3'); document.getElementById('quiz').scrollIntoView({behavior: 'smooth'})">Узнать подробнее</button>
+  </div>
+</div>
+
+<!-- МОДАЛЬНЫЕ ОКНА УСПЕХА/ОШИБКИ ОТПРАВКИ ФОРМЫ -->
+<div class="modal-overlay" id="modal-success">
+  <div class="modal-content success-modal">
+    <div class="success-modal-icon">✓</div>
+    <h3>Заявка отправлена!</h3>
+    <p>Я свяжусь с вами в течение 24 часов</p>
+    <button class="price-btn price-btn-primary" onclick="closeModal('modal-success')">
+      Отлично!
+    </button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-error">
+  <div class="modal-content">
+    <h3>Что-то пошло не так</h3>
+    <p>Попробуйте ещё раз или напишите напрямую в WhatsApp/Telegram</p>
+    <button class="price-btn price-btn-primary" onclick="closeModal('modal-error')">
+      Понятно
+    </button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="logo">Софья Поленова</div>
+  <p>&copy; 2026 Софья Поленова. Фитнес-тренер, нутрициолог</p>
+</div>
+
+<script>
+// TYPING ANIMATION
+const words = ['раз и навсегда', 'без боли', 'с энергией', 'в балансе'];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typedTextSpan = document.querySelector('.typed-text');
+const typingSpeed = 100;
+const deletingSpeed = 50;
+const pauseBetweenWords = 2000;
+
+function type() {
+  const currentWord = words[wordIndex];
+
+  if (isDeleting) {
+    typedTextSpan.textContent = currentWord.substring(0, charIndex - 1);
+    charIndex--;
+  } else {
+    typedTextSpan.textContent = currentWord.substring(0, charIndex + 1);
+    charIndex++;
+  }
+
+  let timeout = isDeleting ? deletingSpeed : typingSpeed;
+
+  if (!isDeleting && charIndex === currentWord.length) {
+    timeout = pauseBetweenWords;
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    wordIndex = (wordIndex + 1) % words.length;
+  }
+
+  setTimeout(type, timeout);
+}
+
+// CAROUSEL
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const dots = document.querySelectorAll('.carousel-dot');
+let carouselInterval;
+
+function showSlide(index) {
+  slides.forEach(s => s.classList.remove('active'));
+  dots.forEach(d => d.classList.remove('active'));
+
+  if (index >= slides.length) currentSlide = 0;
+  if (index < 0) currentSlide = slides.length - 1;
+
+  slides[currentSlide].classList.add('active');
+  dots[currentSlide].classList.add('active');
+}
+
+function carouselNext() {
+  currentSlide++;
+  if (currentSlide >= slides.length) currentSlide = 0;
+  showSlide(currentSlide);
+  resetCarouselTimer();
+}
+
+function carouselPrev() {
+  currentSlide--;
+  if (currentSlide < 0) currentSlide = slides.length - 1;
+  showSlide(currentSlide);
+  resetCarouselTimer();
+}
+
+function goToSlide(index) {
+  currentSlide = index;
+  showSlide(currentSlide);
+  resetCarouselTimer();
+}
+
+function resetCarouselTimer() {
+  clearInterval(carouselInterval);
+  carouselInterval = setInterval(() => {
+    carouselNext();
+  }, 4000);
+}
+
+// TRAINING CAROUSEL
+let currentTraining = 0;
+const trainingSlides = document.querySelectorAll('.training-slide');
+const trainingDots = document.querySelectorAll('.training-dot');
+let trainingInterval;
+
+function showTraining(index) {
+  if (index >= trainingSlides.length) currentTraining = 0;
+  if (index < 0) currentTraining = trainingSlides.length - 1;
+  trainingSlides.forEach(s => s.classList.remove('active'));
+  trainingDots.forEach(d => d.classList.remove('active'));
+  trainingSlides[currentTraining].classList.add('active');
+  trainingDots[currentTraining].classList.add('active');
+}
+function trainingNext() { currentTraining++; showTraining(currentTraining); resetTrainingTimer(); }
+function trainingPrev() { currentTraining--; showTraining(currentTraining); resetTrainingTimer(); }
+function goToTraining(i) { currentTraining = i; showTraining(i); resetTrainingTimer(); }
+function resetTrainingTimer() {
+  clearInterval(trainingInterval);
+  trainingInterval = setInterval(() => { trainingNext(); }, 4000);
+}
+trainingInterval = setInterval(() => { trainingNext(); }, 4000);
+
+// QUIZ LOGIC
+let quizData = {};
+let currentStep = 1;
+
+function selectOption(element, key, value) {
+  const options = element.parentElement.querySelectorAll('.quiz-option');
+  options.forEach(opt => opt.classList.remove('selected'));
+  element.classList.add('selected');
+  quizData[key] = value;
+  const nextBtn = element.closest('.quiz-step').querySelector('.quiz-btn-next');
+  nextBtn.disabled = false;
+}
+
+function enableNextButton(textarea) {
+  quizData.limitations = textarea.value;
+  const nextBtn = textarea.closest('.quiz-step').querySelector('.quiz-btn-next');
+  nextBtn.disabled = textarea.value.trim() === '';
+}
+
+function checkContactForm() {
+  const step = document.querySelector('.quiz-step[data-step="5"]');
+  const inputs = step.querySelectorAll('.quiz-input');
+  const name = inputs[0].value.trim();
+  const contact = inputs[1].value.trim();
+  const nextBtn = step.querySelector('.quiz-btn-next');
+
+  quizData.name = name;
+  quizData.contact = contact;
+  quizData.email = inputs[2].value.trim();
+
+  nextBtn.disabled = name === '' || contact === '';
+}
+
+function nextStep() {
+  document.querySelector(`.quiz-step[data-step="${currentStep}"]`).classList.remove('active');
+  document.querySelectorAll('.progress-dot')[currentStep - 1].classList.remove('active');
+  document.querySelectorAll('.progress-dot')[currentStep].classList.add('active');
+  currentStep++;
+  document.querySelector(`.quiz-step[data-step="${currentStep}"]`).classList.add('active');
+}
+
+function prevStep() {
+  document.querySelector(`.quiz-step[data-step="${currentStep}"]`).classList.remove('active');
+  document.querySelectorAll('.progress-dot')[currentStep - 1].classList.remove('active');
+  document.querySelectorAll('.progress-dot')[currentStep - 2].classList.add('active');
+  currentStep--;
+  document.querySelector(`.quiz-step[data-step="${currentStep}"]`).classList.add('active');
+}
+
+async function submitQuiz() {
+  const submitBtn = document.querySelector('.quiz-step.active .quiz-btn-next');
+  const originalText = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Отправка...';
+
+  try {
+    // 1. Отправка в Google Sheets
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw1NaZPy9oJGuwVx94QIXDfnSqFTYjGo9sBYOBXuhnyojmtMmuDjj1ys0ZklPRrsAF3/exec';
+
+    const formData = new URLSearchParams();
+    formData.append('data', JSON.stringify(quizData));
+
+    await fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: formData
+    });
+
+    // 2. Отправка в Telegram
+    const TELEGRAM_BOT_TOKEN = '7948739539:AAGHDYE9MZp-p6dYhSo52KskECHOcvPLI3Y';
+    const TELEGRAM_CHAT_ID = '641327108';
+
+    const message = formatTelegramMessage(quizData);
+
+    await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        chat_id: TELEGRAM_CHAT_ID,
+        text: message,
+        parse_mode: 'HTML'
+      })
+    });
+
+    // 3. Показать модальное окно успеха
+    openModal('modal-success');
+
+    // 4. Переход к экрану успеха
+    document.querySelector(`.quiz-step[data-step="${currentStep}"]`).classList.remove('active');
+    document.querySelector('.quiz-progress').style.display = 'none';
+    document.querySelector('.quiz-step[data-step="success"]').classList.add('active');
+
+  } catch (error) {
+    console.error('Ошибка отправки:', error);
+    openModal('modal-error');
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  }
+}
+
+function formatTelegramMessage(data) {
+  const goalText = {
+    'body-quality': 'Изменить качество тела (снизить % жира, подтянуться)',
+    'muscle': 'Набрать мышечную массу, стать сильнее',
+    'health': 'Улучшить здоровье (спина, суставы, выносливость)',
+    'pregnancy': 'Подготовка к беременности или восстановление после родов',
+    'unsure': 'Пока не уверена, хочу разобраться'
+  };
+
+  const experienceText = {
+    'never': 'Никогда не занималась — хочу начать с нуля',
+    'had-trainer': 'Занималась с тренером раньше, но сейчас не тренируюсь',
+    'tried-alone': 'Пробовала сама — не хватало системы',
+    'irregular': 'Занимаюсь нерегулярно, без системы',
+    'trains-no-nutrition': 'Тренируюсь регулярно, но не слежу за питанием',
+    'active-with-plan': 'Активно занимаюсь, следую плану тренировок'
+  };
+
+  const locationText = {
+    'home': 'Дома (с минимальным оборудованием)',
+    'gym': 'В тренажёрном зале',
+    'flexible': 'Без разницы, готова к любому варианту'
+  };
+
+  return `🆕 <b>Новая заявка с сайта!</b>\n\n` +
+         `👤 <b>Имя:</b> ${data.name}\n` +
+         `📞 <b>Контакт:</b> ${data.contact}\n` +
+         `📧 <b>Email:</b> ${data.email || '—'}\n\n` +
+         `🎯 <b>Цель:</b> ${goalText[data.goal] || data.goal}\n` +
+         `💪 <b>Опыт:</b> ${experienceText[data.experience] || data.experience}\n` +
+         `🏠 <b>Место:</b> ${locationText[data.location] || data.location}\n` +
+         `⚠️ <b>Ограничения:</b> ${data.limitations || 'Нет'}\n\n` +
+         `⏰ ${new Date().toLocaleString('ru-RU', {timeZone: 'Europe/Moscow'})}`;
+}
+
+// MOBILE MENU FUNCTIONS
+function toggleMobileMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+  document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('open') ? 'hidden' : '';
+}
+function closeMobileMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// MODAL FUNCTIONS
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  }
+});
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(type, 500);
+  resetCarouselTimer();
+});
+</script>
+
+</body>
+</html>
